@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PeerChat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="styles/lobby-peertopeer.css"
+    />
+  </head>
+  <body>
+    <main id="lobby-container">
+      <div id="form-container">
+        <div id="form__container__header">
+          <h2>Create Peer to Peer or Group Video Call</h2>
+        </div>
+
+        <div id="form__content__wrapper">
+          <form id="join-form">
+            <input
+              value="Peer to Peer Video Call"
+              id="peer-btn"
+              type="button"
+            />
+            <input value="Group Video Call" id="group-btn" type="button" />
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    let peerBtn = document.getElementById("peer-btn");
+    let groupBtn = document.getElementById("group-btn");
+
+    peerBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location = "html/lobby-peertopeer.html";
+    });
+
+    groupBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location = "html/lobby.html";
+    });
+  </script>
+</html>
